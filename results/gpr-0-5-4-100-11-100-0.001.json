@@ -1,0 +1,28 @@
+{
+  "model_type": "gpr",
+  "date": "2022/07/14 11:04:31",
+  "config": {
+    "fold": 0,
+    "folds": 5,
+    "m_sparse": 100,
+    "n_train": 100,
+    "noise": 0.001,
+    "n_max": 11,
+    "l_max": 4
+  },
+  "results": {
+    "train_duration": 0.0721428357064724,
+    "testing": {
+      "test_set": {
+        "duration": 1.6580946762114763,
+        "mae": 0.1935750789727973,
+        "n_test": 264000
+      },
+      "train_set": {
+        "duration": 0.0010051131248474121,
+        "mae": 2.10681222142739e-05,
+        "n_test": 100
+      }
+    }
+  }
+}

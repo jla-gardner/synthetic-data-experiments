@@ -1,0 +1,11 @@
+torch
+gpytorch
+ase
+quippy-ase
+pygps
+sklearn
+umap-learn
+colorcet
+locache
+notebook
+pandas

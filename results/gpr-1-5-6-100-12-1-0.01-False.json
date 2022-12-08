@@ -1,0 +1,35 @@
+{
+  "model_type": "gpr",
+  "date": "2022/08/10 10:57:43",
+  "config": {
+    "fold": 1,
+    "folds": 5,
+    "m_sparse": 100,
+    "n_train": 1,
+    "noise": 0.01,
+    "n_max": 12,
+    "l_max": 6,
+    "train_on_equal_cns": false
+  },
+  "results": {
+    "train_duration": 0.0019336752593517303,
+    "testing": {
+      "test_set": {
+        "duration": 1.6787020917981863,
+        "mae": 0.47356710973613714,
+        "n_test": 264000,
+        "cn_2_mae": 1.7265755095178508,
+        "cn_3_mae": 0.44695860617098776,
+        "cn_4_mae": 0.3292082313024978
+      },
+      "train_set": {
+        "duration": 0.0005244854837656021,
+        "mae": 0.0,
+        "n_test": 1,
+        "cn_2_mae": NaN,
+        "cn_3_mae": 0.0,
+        "cn_4_mae": NaN
+      }
+    }
+  }
+}

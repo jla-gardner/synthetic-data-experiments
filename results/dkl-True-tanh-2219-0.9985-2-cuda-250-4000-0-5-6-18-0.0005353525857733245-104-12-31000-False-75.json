@@ -1,0 +1,45 @@
+{
+  "model_type": "dkl",
+  "date": "2022/08/05 10:39:38",
+  "config": {
+    "fold": 0,
+    "folds": 5,
+    "n_train": 31000,
+    "device_type": "cuda",
+    "decay": 0.9985,
+    "n_max": 12,
+    "l_max": 6,
+    "train_on_equal_cns": false,
+    "lr": 0.0005353525857733245,
+    "depth": 2,
+    "width": 75,
+    "last_width": 18,
+    "activation": "tanh",
+    "epochs": 4000,
+    "activate_last": true,
+    "m_sparse": 104,
+    "batchsize": 2219,
+    "early_stopping": 250
+  },
+  "results": {
+    "train_duration": 798.424594845972,
+    "testing": {
+      "test_set": {
+        "duration": 0.9480534209869802,
+        "mae": 0.03425854444503784,
+        "n_test": 264000,
+        "cn_2_mae": 0.10194283723831177,
+        "cn_3_mae": 0.03065824694931507,
+        "cn_4_mae": 0.03129672631621361
+      },
+      "train_set": {
+        "duration": 0.10731483699055389,
+        "mae": 0.024436475709080696,
+        "n_test": 31000,
+        "cn_2_mae": 0.024421581998467445,
+        "cn_3_mae": 0.023426134139299393,
+        "cn_4_mae": 0.027675192803144455
+      }
+    }
+  }
+}

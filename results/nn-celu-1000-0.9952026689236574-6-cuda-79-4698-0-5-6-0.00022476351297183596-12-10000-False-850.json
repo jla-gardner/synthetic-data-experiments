@@ -1,0 +1,43 @@
+{
+  "model_type": "nn",
+  "date": "2022/08/03 14:08:26",
+  "config": {
+    "fold": 0,
+    "folds": 5,
+    "n_train": 10000,
+    "batchsize": 1000,
+    "device_type": "cuda",
+    "train_on_equal_cns": false,
+    "lr": 0.00022476351297183596,
+    "depth": 6,
+    "width": 850,
+    "activation": "celu",
+    "epochs": 4698,
+    "decay": 0.9952026689236574,
+    "early_stopping": 79,
+    "n_max": 12,
+    "l_max": 6
+  },
+  "results": {
+    "train_duration": 109.13837728090584,
+    "actual_epochs": 905,
+    "testing": {
+      "test_set": {
+        "duration": 0.0036090328358113766,
+        "mae": 0.05522237345576286,
+        "n_test": 264000,
+        "cn_2_mae": 0.17433202266693115,
+        "cn_3_mae": 0.049998603761196136,
+        "cn_4_mae": 0.04591638222336769
+      },
+      "train_set": {
+        "duration": 0.00041630305349826813,
+        "mae": 0.01966833882033825,
+        "n_test": 10000,
+        "cn_2_mae": 0.022988615557551384,
+        "cn_3_mae": 0.018590152263641357,
+        "cn_4_mae": 0.022569062188267708
+      }
+    }
+  }
+}
