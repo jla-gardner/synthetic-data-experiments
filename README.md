@@ -60,20 +60,3 @@ The scripts for running the experiments are in `./scripts/`. To run one of these
 ```
 
 e.g. `./run dkl n_max=6 l_max=6` or `./run scripts/gpr.py m_sparse=200`.
-
-----
-
-## Figures
-
-<div align="center">
-
-<img src="plotting/gpr-reg.png" width="250" /> 
-<img src="plotting/m_sparse.png" width="250" />
-<img src="plotting/n-train.png" width="350" />
-
-<img src="plotting/nn-soap-clustering.png" width="500">
-
-![](plotting/nn-umap.png)
-![](plotting/soap-umap.png)
-
-</div>
