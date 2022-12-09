@@ -33,7 +33,7 @@ cd synthetic-data-experiments
 
 ### 2. Install dependencies
 
-We strongly reccomend using a virtual environment. With `conda` installed, this is as simple as:
+We strongly recommend using a virtual environment. With `conda` installed, this is as simple as:
 
 ```bash
 conda create -n experiments python=3.8 -y
