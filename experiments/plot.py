@@ -1,3 +1,6 @@
+"""
+Plotting utilities
+"""
 from scipy.spatial import ConvexHull
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
