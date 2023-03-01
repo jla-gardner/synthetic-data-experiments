@@ -11,12 +11,13 @@ from experiments.saving import _top_dir
 
 def soap_descriptor(**kwargs):
     """
-    Generate a SOAP descriping function
+    create a function that can generate SOAP descriptors
 
     Example
     -------
     >>> soap = soap_descriptor(n_max=3, l_max=3, cutoff=3.7, atom_sigma=0.5)
     >>> soap(Atoms('1C'))
+    array([ 1.0, 0.0, 0.0, ...])
     """
     _desc = Descriptor(
         "soap " + " ".join(f"{k}={v}" for k, v in kwargs.items())
