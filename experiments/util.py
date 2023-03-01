@@ -19,6 +19,27 @@ def mae(a, b):
 
 
 def test_model(model, X, y, cns=None, batchsize=None):
+    """
+    Test a model on a dataset
+    
+    Parameters
+    ----------
+    model : nn.Module
+        model to test
+    X : torch.Tensor
+        test data (atomic environments)
+    y : torch.Tensor
+        test labels (local energies)
+    cns : np.ndarray
+        coordination numbers for each atom
+    batchsize : int
+        batch size
+
+    Returns
+    -------
+    dict
+        results
+    """
     tick = perf_counter()
     with torch.no_grad():
         if batchsize is None:
@@ -76,6 +97,14 @@ def identity(x): return x
 
 
 def parse_passed_kwargs(**types):
+    """
+    Parse passed keyword arguments from the command line
+    
+    Example
+    -------
+    >>> parse_passed_kwargs(n_train=int, n_test=int)
+    {'n_train': 100, 'n_test': 100}
+    """
     if sys.argv[0] == "./run":
         passed = sys.argv[2:]
     else:

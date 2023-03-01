@@ -14,6 +14,20 @@ from experiments.saving import model_path
 
 
 class SVDKL(ApproximateGP):
+    """
+    Sparse variational deep kernel learning model
+    
+    Parameters
+    ----------
+    layers : list of int
+        Number of nodes in each layer
+    activation : str
+        Activation function
+    m_sparse : int
+        Number of inducing points
+    activate_last : bool
+        Whether to apply activation function to last layer    
+    """
     def __init__(self, layers, activation, m_sparse, activate_last=False):
         inducing_points = torch.rand(m_sparse, layers[0])
         if activation in ['tanh']:
@@ -45,6 +59,10 @@ class SVDKL(ApproximateGP):
 
 
 def load_dkl_model(**config):
+    """
+    Load a DKL model matching config from disk
+    """
+
     start = descriptor_length(config['n_max'], config['l_max'])
     layers = [start, *([config['width']] *
                        config['depth']), config['last_width']]
@@ -55,6 +73,31 @@ def load_dkl_model(**config):
 
 
 def train_dkl_model(model, likelihood, x, y, opt, scheduler, epochs, batchsize=4000, early_stopping=0):
+    """
+    Train a DKL model
+
+    Parameters
+    ----------
+    model : SVDKL
+        Model to train
+    likelihood : gpytorch.likelihoods.GaussianLikelihood
+        Likelihood to train
+    x : torch.Tensor
+        Training inputs
+    y : torch.Tensor
+        Training targets
+    opt : torch.optim.Optimizer
+        Optimizer to use
+    scheduler : torch.optim.lr_scheduler._LRScheduler
+        Learning rate scheduler
+    epochs : int
+        Number of epochs to train for
+    batchsize : int
+        Batch size
+    early_stopping : int
+        Number of epochs to wait for an improvement in validation loss
+        before early stopping
+    """
     mll = VariationalELBO(likelihood, model, num_data=len(y))
     def loss(a, b): return -mll(a, b)
 
