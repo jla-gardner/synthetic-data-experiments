@@ -1,5 +1,7 @@
 # synthetic-data-experiments
 
+[![DOI](https://zenodo.org/badge/575528862.svg)](https://zenodo.org/badge/latestdoi/575528862)
+
 Code for generating the results found in
 
 <div align="center">
@@ -15,10 +17,10 @@ _(see the [sister repo](https://github.com/jla-gardner/synthetic-fine-tuning-exp
 
 ## Repo Overview
 
-- **[results/](results/)**: the results of every model fit are stored as individual `.json` files in this directory.
-- **[scripts/](scripts)**: python scripts used to run the experiments.
-- **[plotting/](plotting)**: notebooks used to generate all the plots in the paper.
-- **[models/](models)**: code used to create [GPR](models/gpr.py), [NN](models/nn.py) and [DKL](models/dkl.py) models respectively.
+-   **[results/](results/)**: the results of every model fit are stored as individual `.json` files in this directory.
+-   **[scripts/](scripts)**: python scripts used to run the experiments.
+-   **[plotting/](plotting)**: notebooks used to generate all the plots in the paper.
+-   **[models/](models)**: code used to create [GPR](models/gpr.py), [NN](models/nn.py) and [DKL](models/dkl.py) models respectively.
 
 ---
 
@@ -50,11 +52,10 @@ pip install -r requirements.txt
 
 A sample of the full dataset already exists at `all.extxyz`. The complete dataset can be found at [this url](https://github.com/jla-gardner/carbon-data).
 
-
 ### 4. Run the code
 
 The scripts for running the experiments are in `./scripts/`. To run one of these, do:
-    
+
 ```bash
 ./run <script-name> [keyword-args]
 ```
